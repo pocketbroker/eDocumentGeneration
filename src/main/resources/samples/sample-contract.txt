@@ -1,0 +1,31 @@
+SAMPLE CONTRACT AGREEMENT
+
+This Agreement is entered into as of [DATE] between:
+
+Party A: ___________________________
+Party B: ___________________________
+
+1. PURPOSE
+This contract outlines the terms and conditions agreed upon by both parties.
+
+2. TERMS
+The parties agree to the following terms:
+- Term 1: Both parties will fulfill their obligations as described.
+- Term 2: Payment terms are net 30 days.
+- Term 3: This agreement is valid for 12 months.
+
+3. SIGNATURES
+By signing below, both parties acknowledge and agree to the terms above.
+
+Party A Signature: /sn1/
+
+Date: ______________
+
+
+Party B Signature: **signature_1**
+
+Date: ______________
+
+
+Note: This is a sample document. The /sn1/ and **signature_1** markers are anchor strings
+that DocuSign uses to automatically place signature fields in the document.
