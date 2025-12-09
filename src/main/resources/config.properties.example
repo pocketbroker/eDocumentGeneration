@@ -1,0 +1,28 @@
+# DocuSign Configuration Example
+# Copy this file to config.properties and fill in your actual values
+
+# DocuSign Integration Key (Client ID)
+# Get this from: https://admindemo.docusign.com/apps-and-keys
+docusign.integrationKey=YOUR_INTEGRATION_KEY_HERE
+
+# DocuSign User ID (GUID)
+# Found in your DocuSign admin console under Apps and Keys
+docusign.userId=YOUR_USER_ID_HERE
+
+# DocuSign Account ID
+# Found in your DocuSign account settings
+docusign.accountId=YOUR_ACCOUNT_ID_HERE
+
+# Path to your RSA private key file
+# Generate this from DocuSign admin console under Apps and Keys
+docusign.privateKeyPath=/path/to/your/private.key
+
+# DocuSign Base Path (use demo for development, production for live)
+# Demo: https://demo.docusign.net/restapi
+# Production: https://www.docusign.net/restapi
+docusign.basePath=https://demo.docusign.net/restapi
+
+# DocuSign OAuth Base Path
+# Demo: account-d.docusign.com
+# Production: account.docusign.com
+docusign.oAuthBasePath=account-d.docusign.com
