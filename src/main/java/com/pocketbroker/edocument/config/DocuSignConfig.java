@@ -96,8 +96,8 @@ public class DocuSignConfig {
     public String toString() {
         return "DocuSignConfig{" +
                 "integrationKey='" + (integrationKey != null ? "***" : "null") + '\'' +
-                ", userId='" + userId + '\'' +
-                ", accountId='" + accountId + '\'' +
+                ", userId='" + (userId != null ? "***" : "null") + '\'' +
+                ", accountId='" + (accountId != null ? "***" : "null") + '\'' +
                 ", basePath='" + basePath + '\'' +
                 ", oAuthBasePath='" + oAuthBasePath + '\'' +
                 '}';

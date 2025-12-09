@@ -90,7 +90,9 @@ public class DocuSignIntegration {
         // Update base path if needed
         if (userInfo.getAccounts() != null && !userInfo.getAccounts().isEmpty()) {
             String baseUri = userInfo.getAccounts().get(0).getBaseUri();
-            apiClient.setBasePath(baseUri + "/restapi");
+            if (baseUri != null && !baseUri.isEmpty()) {
+                apiClient.setBasePath(baseUri + "/restapi");
+            }
         }
     }
 
@@ -266,7 +268,17 @@ public class DocuSignIntegration {
         return tabs;
     }
 
-    public ApiClient getApiClient() {
+    /**
+     * Gets the authenticated API client.
+     * This method is package-private to limit access.
+     * 
+     * @return the authenticated ApiClient instance
+     * @throws IllegalStateException if not authenticated
+     */
+    ApiClient getApiClient() {
+        if (apiClient == null) {
+            throw new IllegalStateException("API client not initialized. Call authenticate() first.");
+        }
         return apiClient;
     }
 }
