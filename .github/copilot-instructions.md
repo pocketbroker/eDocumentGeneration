@@ -21,7 +21,7 @@ This repository handles the generation of electronically signable documents. Whe
 
 ### Document Generation
 - Maintain document integrity and ensure generated documents are tamper-proof
-- Follow relevant standards for electronic signatures (e.g., eIDAS, ESIGN)
+- Follow relevant standards for electronic signatures (e.g., eIDAS, E-SIGN Act)
 - Implement proper error handling for document generation failures
 - Log document generation activities for audit trails
 - Test document generation with various input scenarios
