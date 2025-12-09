@@ -98,7 +98,7 @@ public class PartnerCDocumentGenerator implements DocumentGenerator {
 
 ### Prerequisites
 
-- Java 11 or higher
+- Java 17 or higher
 - Maven 3.6 or higher
 
 ### Build
