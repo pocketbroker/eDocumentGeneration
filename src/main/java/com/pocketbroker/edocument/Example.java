@@ -40,11 +40,14 @@ public class Example {
         System.out.println("=== Example: Sending Document for Signature via Email ===\n");
 
         // Step 1: Configure DocuSign credentials
+        // IMPORTANT: Replace these placeholder values with your actual DocuSign credentials
+        // For better security, consider using ConfigLoader to load from a config.properties file
+        // See USAGE_GUIDE.md for setup instructions
         DocuSignConfig config = new DocuSignConfig();
-        config.setIntegrationKey("YOUR_INTEGRATION_KEY");
-        config.setUserId("YOUR_USER_ID");
-        config.setAccountId("YOUR_ACCOUNT_ID");
-        config.setPrivateKeyPath("/path/to/private.key");
+        config.setIntegrationKey("YOUR_INTEGRATION_KEY");  // Replace with your Integration Key
+        config.setUserId("YOUR_USER_ID");  // Replace with your User ID (GUID)
+        config.setAccountId("YOUR_ACCOUNT_ID");  // Replace with your Account ID
+        config.setPrivateKeyPath("/path/to/private.key");  // Replace with path to your private key file
         
         System.out.println("1. DocuSign configuration created");
 
@@ -108,11 +111,14 @@ public class Example {
         System.out.println("=== Example: Creating Embedded Signing URL ===\n");
 
         // Step 1: Configure DocuSign credentials
+        // IMPORTANT: Replace these placeholder values with your actual DocuSign credentials
+        // For better security, consider using ConfigLoader to load from a config.properties file
+        // See USAGE_GUIDE.md for setup instructions
         DocuSignConfig config = new DocuSignConfig();
-        config.setIntegrationKey("YOUR_INTEGRATION_KEY");
-        config.setUserId("YOUR_USER_ID");
-        config.setAccountId("YOUR_ACCOUNT_ID");
-        config.setPrivateKeyPath("/path/to/private.key");
+        config.setIntegrationKey("YOUR_INTEGRATION_KEY");  // Replace with your Integration Key
+        config.setUserId("YOUR_USER_ID");  // Replace with your User ID (GUID)
+        config.setAccountId("YOUR_ACCOUNT_ID");  // Replace with your Account ID
+        config.setPrivateKeyPath("/path/to/private.key");  // Replace with path to your private key file
         
         System.out.println("1. DocuSign configuration created");
 

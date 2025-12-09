@@ -28,8 +28,31 @@ public class DocuSignIntegration {
     private final DocuSignConfig config;
     private ApiClient apiClient;
     
+    /**
+     * Y-axis offset (in pixels) for signature field placement relative to anchor string
+     */
     private static final int ANCHOR_OFFSET_Y = 10;
+    
+    /**
+     * X-axis offset (in pixels) for signature field placement relative to anchor string
+     */
     private static final int ANCHOR_OFFSET_X = 20;
+    
+    /**
+     * JWT token expiration time in seconds (1 hour)
+     */
+    private static final int TOKEN_EXPIRATION_SECONDS = 3600;
+    
+    /**
+     * Starting document ID for envelope documents
+     */
+    private static final int INITIAL_DOCUMENT_ID = 1;
+    
+    /**
+     * Starting recipient ID for envelope recipients
+     */
+    private static final int INITIAL_RECIPIENT_ID = 1;
+    
     private static final List<String> SCOPES = Collections.singletonList(OAuth.Scope_SIGNATURE);
 
     public DocuSignIntegration(DocuSignConfig config) {
@@ -55,7 +78,7 @@ public class DocuSignIntegration {
                 config.getUserId(),
                 SCOPES,
                 privateKeyBytes,
-                3600
+                TOKEN_EXPIRATION_SECONDS
         );
         
         // Set the access token
@@ -174,7 +197,7 @@ public class DocuSignIntegration {
 
         // Add documents
         List<com.docusign.esign.model.Document> docuSignDocuments = new ArrayList<>();
-        int docId = 1;
+        int docId = INITIAL_DOCUMENT_ID;
         for (Document doc : envelopeConfig.getDocuments()) {
             com.docusign.esign.model.Document dsDoc = new com.docusign.esign.model.Document();
             dsDoc.setDocumentBase64(DocumentUtil.encodeToBase64(doc.getContent()));
@@ -189,7 +212,7 @@ public class DocuSignIntegration {
         // Add signers
         Recipients recipients = new Recipients();
         List<com.docusign.esign.model.Signer> dsSigners = new ArrayList<>();
-        int recipientId = 1;
+        int recipientId = INITIAL_RECIPIENT_ID;
         for (Signer signer : envelopeConfig.getSigners()) {
             com.docusign.esign.model.Signer dsSigner = new com.docusign.esign.model.Signer();
             dsSigner.setEmail(signer.getEmail());
