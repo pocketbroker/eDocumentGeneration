@@ -22,7 +22,7 @@ public class DefaultSignableDocument implements SignableDocument {
                                    LocalDateTime createdAt, Map<String, String> metadata,
                                    boolean readyForSigning) {
         this.documentId = documentId;
-        this.content = content;
+        this.content = content.clone();
         this.documentType = documentType;
         this.createdAt = createdAt;
         this.metadata = new HashMap<>(metadata);
@@ -36,7 +36,7 @@ public class DefaultSignableDocument implements SignableDocument {
     
     @Override
     public byte[] getContent() {
-        return content;
+        return content.clone();
     }
     
     @Override
